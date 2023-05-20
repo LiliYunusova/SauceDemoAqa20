@@ -5,7 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.LinkedInPage;
 import pages.LoginPage;
 import pages.SauceDemoInventoryPage;
 import java.util.concurrent.TimeUnit;
@@ -22,8 +24,8 @@ public class SauceDemoLinkedinTest extends BaseTest{
         loginPage.clickLoginButton();
         SauceDemoInventoryPage sauceDemoInventoryPage = new SauceDemoInventoryPage(driver);
         sauceDemoInventoryPage.socialLinkedinLinkClick();
- //     driver.findElement(By.xpath("//a[@href='https://www.linkedin.com/signup?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fsauce-labs&trk=organization_guest_contextual-sign-in-modal_join-link']")).click();
-//        sauceDemoInventoryPage.switchToWindowAndGetText();
-
+        sauceDemoInventoryPage.switchToWindow();
+        LinkedInPage linkedInPage = new LinkedInPage(driver);
+        Assert.assertTrue(linkedInPage.isEnableLinkedinPage(), "Mistake");
     }
 }
