@@ -31,7 +31,7 @@ public class SauceDemoWebElements {
     WebElement inventorySidebarLink = driver.findElement(By.cssSelector("#inventory_sidebar_link"));
     WebElement bmItemListNav = driver.findElement(By.cssSelector("nav"));
     WebElement appLogoDiv = driver.findElement(By.cssSelector("div .app_logo"));
-    WebElement dataTest = driver.findElement(By.cssSelector("[data-test = 'login-button']");
+    WebElement dataTest = driver.findElement(By.cssSelector("[data-test = 'login-button']"));
     WebElement checkout = driver.findElement(By.cssSelector("[data-test ~='checkout']"));
     WebElement continueDataTest = driver.findElement(By.cssSelector("[data-test |= 'continue']"));
     WebElement description = driver.findElement(By.cssSelector("[class^= cart]"));
