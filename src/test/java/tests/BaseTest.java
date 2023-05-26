@@ -13,6 +13,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
+        System.out.println(System.getProperty("env"));
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

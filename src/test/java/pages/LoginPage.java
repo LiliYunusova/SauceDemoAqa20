@@ -23,11 +23,11 @@ public class LoginPage extends BasePage{
         driver.findElement(loginButton).click();
     }
 
-    public void sendKeysLogin(){
-        driver.findElement(login).sendKeys("standard_user");
+    public void sendKeysLogin(String login){
+        driver.findElement(this.login).sendKeys("standard_user");
     }
 
-    public void sendKeysPassword(){
-        driver.findElement(password).sendKeys("secret_sauce");
+    public void sendKeysPassword(String password){
+        driver.findElement(this.password).sendKeys("secret_sauce");
     }
 }
